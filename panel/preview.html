@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Preview</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    :root {
+      --oc-bg: #f6f7f8;
+      --oc-elevated: #ffffff;
+      --oc-fg: #17181a;
+      --oc-muted: #6b7280;
+      --oc-subtle: #9aa1ab;
+      --oc-border: #e6e7ea;
+      --oc-hover: #f0f1f3;
+      --oc-selection: #eef2ff;
+      --oc-primary: #3b5bdb;
+      --oc-primary-fg: #ffffff;
+      --oc-primary-text: #2f49b5;
+      --oc-success: #2f9e44;
+      --oc-success-text: #237a35;
+      --oc-warning: #e8890c;
+      --oc-warning-text: #a35f05;
+      --oc-error: #e03131;
+      --oc-error-text: #b02525;
+      --oc-info: #1c7ed6;
+      --oc-info-text: #1864ab;
+      --oc-font: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      --oc-mono: "Cascadia Code", Consolas, monospace;
+      --oc-radius: 10px;
+    }
+    body { background: var(--oc-bg); }
+  </style>
+  <script>
+    if (new URLSearchParams(location.search).has("dark")) {
+      const v = {
+        "--oc-bg": "#16181c", "--oc-elevated": "#1d2025", "--oc-fg": "#e7e9ec",
+        "--oc-muted": "#9aa3ad", "--oc-subtle": "#6f7883", "--oc-border": "#2b3037",
+        "--oc-hover": "#242930", "--oc-selection": "#232d3f", "--oc-primary": "#7c93ff",
+        "--oc-primary-fg": "#0f1216", "--oc-primary-text": "#93a7ff",
+        "--oc-success": "#51cf66", "--oc-success-text": "#69db7c",
+        "--oc-warning": "#ffa94d", "--oc-warning-text": "#ffc078",
+        "--oc-error": "#ff6b6b", "--oc-error-text": "#ff8787",
+        "--oc-info": "#4dabf7", "--oc-info-text": "#74c0fc",
+      }
+      for (const [k, val] of Object.entries(v)) document.documentElement.style.setProperty(k, val)
+      if (document.body) document.body.style.background = "#16181c"
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./main.js?preview=1"></script>
+</body>
+</html>

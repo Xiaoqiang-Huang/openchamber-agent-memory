@@ -1,0 +1,50 @@
+{
+  "name": "openchamber-agent-memory",
+  "version": "0.5.0",
+  "private": false,
+  "type": "module",
+  "description": "Local-first memory for OpenChamber: SQLite store, grouped scopes, session state, draft promotion and a knowledge graph.",
+  "license": "MIT",
+  "homepage": "https://github.com/Xiaoqiang-Huang/openchamber-agent-memory#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiaoqiang-Huang/openchamber-agent-memory.git"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "openchamber": {
+    "apiVersion": 1,
+    "engines": {
+      "openchamber": ">=2.7.0"
+    },
+    "id": "agent-memory",
+    "name": "Agent Memory",
+    "icon": "assets/memory.svg",
+    "contributes": {
+      "panel": {
+        "entry": "panel/index.html"
+      },
+      "service": {
+        "entry": "service/main.js",
+        "runtime": "host",
+        "permissions": {
+          "exec": [
+            "node"
+          ]
+        }
+      },
+      "capabilities": [
+        "sessions"
+      ]
+    }
+  },
+  "dependencies": {
+    "@openchamber/sdk": "2.7.2",
+    "cytoscape": "^3.35.0",
+    "d3-force": "^3.0.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}

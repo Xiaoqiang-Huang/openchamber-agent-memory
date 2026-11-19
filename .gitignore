@@ -1,0 +1,9 @@
+node_modules/
+bun.lock
+shots/
+*.db
+*.db-wal
+*.db-shm
+.agent-memory/
+tmp/
+install.json

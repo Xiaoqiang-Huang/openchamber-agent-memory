@@ -1,0 +1,14 @@
+{
+  "name": "agent-memory-core",
+  "version": "0.5.1",
+  "private": true,
+  "type": "module",
+  "description": "Vendored agent-memory core: SQLite memory store + CLI (bin/mem.mjs).",
+  "bin": {
+    "mem": "bin/mem.mjs"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT"
+}
